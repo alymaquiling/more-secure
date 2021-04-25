@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: whoami
-      - run: pwd
+      - run: echo "testing this out again"
+      - run: echo ${{ toJSON(github) }}
       - run: npm install -g bats
       - run: bats -v
